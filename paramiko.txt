@@ -1,0 +1,23 @@
+Faraday15
+https://vimeo.com/137421584
+
+The video password is: Faraday15
+
+     I. Paramiko Part1
+        video https://vimeo.com/137421584
+        Length is 5 minutes
+
+    II. Paramiko Part2
+        video https://vimeo.com/137423157
+        Length is 11 minutes
+
+   III. Paramiko Part3
+        video https://vimeo.com/137423937?
+        Length is 7 minutes
+
+   IV. Pexpect
+        video https://vimeo.com/137430617
+        Length is 15 minutes
+
+    V. Netmiko
+        video https://vimeo.com/137432446

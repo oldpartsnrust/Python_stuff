@@ -1,0 +1,13 @@
+---
+
+  - name: GATHER IOS FACTS
+    hosts: iosxe
+    gather_facts: no
+
+    tasks:
+      - name: GET FACTS
+        ios_facts:
+        register: ntc_ios_facts
+
+      - debug:
+          var: ntc_ios_facts

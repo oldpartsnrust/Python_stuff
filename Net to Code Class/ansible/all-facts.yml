@@ -1,0 +1,90 @@
+---
+
+  - name: GATHER IOS FACTS
+    hosts: iosxe
+    gather_facts: no
+    tags: ios
+
+    tasks:
+      - name: GET FACTS
+        ios_facts:
+        register: ntc_ios_facts
+
+      - name: DEBUG FACTS
+        debug:
+          var: ntc_ios_facts
+
+      - name: DEBUG OS VERSION
+        debug:
+          var: ntc_ios_facts['ansible_facts']['ansible_net_version']
+
+      - name: DEBUG SHORTHAND OS VERSION
+        debug:
+          var: ansible_net_version
+
+  - name: GATHER NXOS FACTS
+    hosts: nxos
+    gather_facts: no
+    tags: nxos
+
+    tasks:
+      - name: GET NXOS FACTS
+        nxos_facts:
+        register: ntc_nxos_facts
+
+      - name: DEBUG FACTS
+        debug:
+          var: ntc_nxos_facts
+
+      - name: DEBUG OS VERSION
+        debug:
+          var: ntc_nxos_facts['ansible_facts']['ansible_net_version']
+
+      - name: DEBUG SHORTHAND OS VERSION
+        debug:
+          var: ansible_net_version
+
+  - name: GATHER EOS FACTS
+    hosts: eos
+    gather_facts: no
+    tags: eos
+
+    tasks:
+      - name: GET EOS FACTS
+        eos_facts:
+        register: ntc_eos_facts
+
+      - name: DEBUG FACTS
+        debug:
+          var: ntc_eos_facts
+
+      - name: DEBUG OS VERSION
+        debug:
+          var: ntc_eos_facts['ansible_facts']['ansible_net_version']
+
+      - name: DEBUG SHORTHAND OS VERSION
+        debug:
+          var: ansible_net_version
+
+  - name: GATHER JUNOS FACTS
+    hosts: vmx
+    connection: local
+    gather_facts: no
+    tags: junos
+
+    tasks:
+      - name: GET FACTS
+        junos_facts:
+        register: ntc_junos_facts
+
+      - name: DEBUG FACTS
+        debug:
+          var: ntc_junos_facts
+
+      - name: DEBUG OS VERSION
+        debug:
+          var: ntc_junos_facts['ansible_facts']['ansible_net_version']
+
+      - name: DEBUG SHORTHAND OS VERSION
+        debug:
+          var: ntc_junos_facts
